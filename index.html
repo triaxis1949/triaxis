@@ -47,13 +47,12 @@
       color: #c9c3bb;
     }
     .hero {
-      
-   
-      padding: 130px 6vw 80px;
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 58px;
-      align-items: center;
+    padding: 40px 5vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
     }
     .eyebrow {
       color: #a89f94;
@@ -118,6 +117,11 @@
     
       .photo-card img {
     width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 18px;
+    display: block;
+}
     height: auto;
      border-radius: 18px;
     display: block;
@@ -223,7 +227,7 @@
       .hero { grid-template-columns: 1fr; }
       .grid { grid-template-columns: 1fr; }
       .specs { grid-template-columns: repeat(2, 1fr); }
-      .nav-links { display: none; }
+      .nav-links { display: flex; }
       .about-box { padding: 28px; }
    
 
@@ -266,7 +270,7 @@
 
      <section class="hero">
        
-        <img src="images/hero.jpg">
+        <img src="image/hero.jpg">
         
         <div class="caption">
           VELITH pure white prototype basin — 36 cm outer diameter, 11 cm height, 11 mm wall profile.
