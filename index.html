@@ -221,16 +221,47 @@
       border-top: 1px solid rgba(255,255,255,0.08);
       font-size: 14px;
     }
-    @media (max-width: 960px) {
-      .hero { grid-template-columns: 1fr; }
-      .grid { grid-template-columns: 1fr; }
-      .specs { grid-template-columns: repeat(2, 1fr); }
-      .nav-links { display: flex; }
-      .about-box { padding: 28px; }
-   
+  
+   @media (max-width: 960px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 70px 24px 40px;
+
+        background-size: 55%;
+        background-position: center bottom;
+    }
+
+    .hero h1 {
+        font-size: 64px;
+    }
+
+    .hero p {
+        font-size: 18px;
+        line-height: 1.7;
+    }
+
+    .nav-links {
+        gap: 18px;
+        font-size: 14px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .specs {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-box {
+        padding: 24px;
+    }
+}
 
     
-  </style>
+  n </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
