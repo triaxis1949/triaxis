@@ -52,11 +52,13 @@
     grid-template-columns: 1fr 1fr;
     gap: 30px;
     align-items: center;
-
-    background-image: url('hero.jpg');
-    background-size: 42%;
-    background-position: right 40% center;
-    background-repeat: no-repeat;
+      
+.hero-image {
+    width: 100%;
+    max-width: 480px;
+    border-radius: 28px;
+    display: block;
+    margin: 0 auto;
 }
     
     .eyebrow {
@@ -282,7 +284,8 @@
         <div class="eyebrow">Engineered in Taiwan · Architectural Mineral System</div>
         <h1>VELITH</h1>
         <div class="subtitle">Thin-Wall Engineered Mineral Washbasin</div>
-
+       
+     
         <p class="lead">
           VELITH is a thin-wall engineered mineral washbasin, cast in a pure white BCSA–RUFA mineral composite system.
         </p>
@@ -290,14 +293,16 @@
         <p class="body-text">
           With an 11 mm wall profile and a weight of only 6.7 kg, it offers the visual lightness of ceramic with the material depth of architectural mineral casting.
         </p>
-
+        
+</div>
         <div class="buttons">
           <a class="btn primary" href="#about">About VELITH</a>
           <a class="btn" href="#specs">View Specifications</a>
         </div>
       </div>
-
-     <section class="hero">
+      
+<img src="hero.jpg" class="hero-image">
+    
        
          <div class="caption">
           VELITH pure white prototype basin — 36 cm outer diameter, 11 cm height, 11 mm wall profile.
