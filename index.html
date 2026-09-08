@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VELITH™ | Architectural Mineral Washbasins & White BCSA Casting System</title>
+  <title>VELITH | Architectural Mineral Washbasins & White BCSA Casting System</title>
   <meta name="description" content="VELITH combines premium architectural mineral washbasins with a controlled White BCSA mineral casting system for selected international partners.">
   <style>
     :root{
@@ -11,8 +11,10 @@
       --line:rgba(255,255,255,.16);--accent:#d7c7aa;--dark:#22242b;
     }
     *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:88px}
     body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
     a{color:inherit;text-decoration:none}
+    a:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
     .container{width:min(1120px,calc(100% - 40px));margin:0 auto}
     header{position:sticky;top:0;z-index:10;background:rgba(17,19,26,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
     .nav{height:72px;display:flex;justify-content:space-between;align-items:center;gap:24px}
@@ -20,7 +22,7 @@
     .links{display:flex;gap:22px;color:var(--muted);font-size:14px;flex-wrap:wrap}
     .links a:hover{color:var(--text)}
     .hero{padding:86px 0;background:linear-gradient(135deg,#141722,#24283a 58%,#11131a)}
-    .hero-grid{display:grid;grid-template-columns:.85fr 1.5fr;gap:42px;align-items:center}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
     .eyebrow{color:var(--accent);letter-spacing:.22em;text-transform:uppercase;font-size:12px;font-weight:700;margin-bottom:22px}
     h1{font-size:clamp(54px,8vw,96px);line-height:.92;margin:0 0 20px;letter-spacing:-.045em}
     h2{font-size:clamp(30px,4.5vw,54px);line-height:1.08;margin:0 0 20px;letter-spacing:-.035em}
@@ -30,10 +32,10 @@
     .btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
     .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:999px;border:1px solid rgba(255,255,255,.24);font-weight:700;font-size:14px}
     .btn.primary{background:var(--stone);color:var(--dark);border-color:var(--stone)}
+    .btn:hover{transform:translateY(-1px)}
     .photo{position:relative;min-height:420px;border-radius:30px;overflow:hidden;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);box-shadow:0 26px 70px rgba(0,0,0,.35);display:grid;place-items:center}
-    .photo img{width:100%;height:100%;min-height:420px; object-position:center 100%; object-fit:cover}
- 
-    .photo.missing:before{content:"Put your basin photo here: velith-basin.jpg";color:var(--muted);font-style:italic;padding:30px;text-align:center}
+    .photo img{width:100%;height:100%;min-height:420px;object-fit:cover;display:block}
+    .photo.missing:before{content:"Put your basin photo here: velith-bh-mw-hero.jpg";color:var(--muted);font-style:italic;padding:30px;text-align:center}
     .caption{position:absolute;left:0;right:0;bottom:0;background:rgba(17,19,26,.76);padding:14px 18px;color:#ddd;font-size:13px}
     section{padding:80px 0}
     .light{background:var(--stone);color:var(--dark)}
@@ -50,18 +52,47 @@
     .note{margin-top:22px;padding:18px 20px;border-left:3px solid var(--accent);background:rgba(255,255,255,.06);border-radius:12px;color:#d9dae0}
     .contact{background:linear-gradient(135deg,#20232d,#12141b);border:1px solid var(--line);border-radius:30px;padding:42px}
     footer{padding:36px 0;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+
+    .collection-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:34px}
+    .product-card{background:#fff;border:1px solid rgba(0,0,0,.10);border-radius:26px;padding:30px}
+    .product-card h3{margin-bottom:8px}
+    .spec-line{font-size:14px;color:#666;margin-top:14px}
+    .palette{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+    .colour-card{background:#fff;border:1px solid rgba(0,0,0,.10);border-radius:22px;padding:22px;text-align:center}
+    .swatch{width:92px;height:92px;border-radius:50%;margin:0 auto 16px;border:1px solid rgba(0,0,0,.08);box-shadow:0 8px 22px rgba(0,0,0,.08)}
+    .mw{background:#f3f1e9}.rg{background:#d8d5ca}.bp{background:#dfc5c5}
+    .sku{font-size:13px;color:#777;letter-spacing:.06em;margin-top:8px}
+    .product-showcase{margin-top:38px}
+    .showcase-title{margin:0 2px 14px;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:#666}
+    .showcase-layout{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(260px,.85fr);grid-template-rows:440px;gap:16px}
+    .showcase-main,.showcase-small,.bh-pink-detail{margin:0;border-radius:22px;overflow:hidden;background:#eee}
+    .showcase-main{height:440px}.showcase-main img{width:100%;height:100%;object-fit:cover;display:block}
+    .showcase-side{height:440px;display:grid;grid-template-rows:212px 212px;gap:16px}
+    .showcase-small{height:212px}.showcase-small img{width:100%;height:100%;object-fit:cover;display:block}
+    .sb-top img{object-position:center center}
+    .sb-detail img{object-position:center 55%}
+    .bh-colour-label{margin:14px 2px 30px;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:#666}
+    .bh-pink-accent{width:100%;margin-top:8px}
+    .bh-pink-detail{width:100%;height:250px}
+    .bh-pink-detail img{width:100%;height:100%;object-fit:cover;object-position:center 70%;display:block}
     @media(max-width:880px){
-      .hero-grid,.cards,.grid3,.grid4,.split{grid-template-columns:1fr}
-      .nav{height:auto;padding:18px 0;align-items:flex-start}
+      .hero-grid,.cards,.grid3,.grid4,.split,.collection-grid,.showcase-layout,.palette{grid-template-columns:1fr}
+      .showcase-main{height:auto}.showcase-main img{height:auto;aspect-ratio:4/3}
+      .showcase-side{height:auto;grid-template-columns:1fr 1fr;grid-template-rows:none}
+      .showcase-small{height:auto}.showcase-small img{height:auto;aspect-ratio:4/3}
+      .bh-pink-detail{height:170px}
+      .nav{height:auto;padding:16px 0;align-items:flex-start;flex-direction:column;gap:10px}
+      .links{gap:10px 16px;font-size:13px}
+      section{padding:64px 0}
+      .hero{padding:64px 0}
       .photo,.photo img{min-height:300px}
     }
-    .tm{font-size:.28em;vertical-align:super;letter-spacing:0;margin-left:4px}
   </style>
 </head>
 <body>
   <header>
     <div class="container nav">
-     <a class="brand" href="#home">VELITH<span class="tm">™</span></a>
+      <a class="brand" href="#home">VELITH</a>
       <nav class="links">
         <a href="#washbasins">Washbasins</a>
         <a href="#casting">Casting System</a>
@@ -76,20 +107,18 @@
     <section class="hero" id="home">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow">Engineered in Taiwan · White BCSA Mineral Technology</div>
-          <h1>VELITH<span class="tm">™</span></h1>
-          <h2>Architectural Mineral Washbasins & White BCSA Casting System</h2>
-          <p class="lead">VELITH combines premium finished washbasins with a controlled White BCSA mineral casting platform for selected international partners.</p>
-          <p class="lead">Developed by Triaxis, VELITH introduces a new material language for high-end bathroom design: soft matte mineral surfaces, refined geometry, low-shrinkage cementitious technology, and a white mineral base for contemporary architectural expression.</p>
+          <div class="eyebrow">Architectural Mineral Casting · Engineered by Triaxis</div>
+          <h1>VELITH</h1>
+          <h2>A new mineral language for bathroom design.</h2>
+          <p class="lead">Architectural mineral washbasins and a White BCSA casting platform for designers, brands and selected manufacturing partners.</p>
           <div class="btns">
             <a class="btn primary" href="#washbasins">Explore Washbasins</a>
-            <a class="btn" href="#casting">Explore Casting System</a>
-            <a class="btn" href="#resources">Request Technical Pack</a>
+            <a class="btn" href="#casting">Casting System</a>
           </div>
         </div>
         <figure class="photo">
-          <img src="velith-basin.jpg" alt="VELITH white architectural mineral countertop basin" onerror="this.style.display='none';this.parentElement.classList.add('missing');">
-          <figcaption class="caption">Reference prototype: white architectural mineral countertop basin.</figcaption>
+          <img src="velith-bh-mw-hero.jpg" alt="VELITH Broad Helix architectural mineral washbasin in Mineral White" onerror="this.style.display='none';this.parentElement.classList.add('missing');">
+          <figcaption class="caption">Broad Helix · Mineral White</figcaption>
         </figure>
       </div>
     </section>
@@ -97,23 +126,76 @@
     <section class="light">
       <div class="container">
         <div class="label">Two Ways to Work With VELITH</div>
-        <h2>One material platform. Two business directions.</h2>
-        <p class="muted">VELITH is not only a finished washbasin brand. It is also a technical mineral casting system developed for professional partners who want to explore a new category of high-end architectural bathroom products.</p>
+        <h2>One mineral platform. Two paths.</h2>
+        <p class="muted">Choose finished VELITH washbasins, or work with the underlying casting platform to develop new products and applications.</p>
         <div class="cards">
           <article class="card" id="washbasins">
-            <h3>VELITH Washbasins</h3>
-            <p>Finished architectural mineral basins for architects, interior designers, bathroom showrooms, distributors, boutique hotels, and premium residential projects.</p>
-            <p>VELITH finished washbasins showcase calm matte surfaces, mineral depth, clean geometry, and a refined alternative to conventional ceramic, resin, or ordinary concrete basins.</p>
-            <ul><li>Bathroom showrooms</li><li>Architects and designers</li><li>Premium residential and hospitality projects</li><li>Regional distributors</li></ul>
-            <div class="btns"><a class="btn primary" href="#contact">Request Washbasin Brochure</a></div>
+            <h3>Finished Washbasins</h3>
+            <p>VELITH collections for distribution, specification and project supply — combining refined geometry with a soft matte mineral surface.</p>
+            <div class="btns"><a class="btn primary" href="#collection">View Collection</a></div>
           </article>
           <article class="card" id="casting">
-            <h3>VELITH Casting System</h3>
-            <p>A controlled White BCSA mineral casting platform for selected basin studios, OEM / ODM manufacturers, concrete basin makers, terrazzo workshops, and architectural material partners.</p>
-            <p>The system is designed to support controlled thin-wall basin casting, rapid demoulding, low shrinkage, and refined mineral surface finishing.</p>
-            <ul><li>Basin studios</li><li>OEM / ODM partners</li><li>Concrete and terrazzo workshops</li><li>Architectural material manufacturers</li></ul>
-            <div class="btns"><a class="btn primary" href="#contact">Request Casting System TDS</a></div>
+            <h3>Casting System</h3>
+            <p>A White BCSA mineral casting platform for selected OEM, private-label and product-development partners exploring new forms and applications.</p>
+            <div class="btns"><a class="btn primary" href="#contact">Discuss Collaboration</a></div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="light" id="collection">
+      <div class="container">
+        <div class="label">VELITH Launch Collection</div>
+        <h2>Two forms. Three mineral colours.</h2>
+        <p class="muted">A focused six-product collection built around two distinct forms and a quiet architectural palette.</p>
+        <div class="collection-grid">
+          <article class="product-card">
+            <h3>Soft Bowl</h3><p>Smooth · Refined · Timeless</p>
+            <p>A low, gently curved round basin with a smooth exterior and a quiet, minimal profile.</p>
+            <div class="spec-line">Ø 360 mm · H 107 mm · wall 10 mm · approx. 6.6 kg · drain Ø 45 mm</div>
+            <div class="sku">SB-MW · SB-RG · SB-BP</div>
+          </article>
+          <article class="product-card">
+            <h3>Broad Helix</h3><p>Sculptural · Textured · Contemporary</p>
+            <p>A round basin defined by broad diagonal helix fluting, creating a softer sculptural play of light and shadow.</p>
+            <div class="spec-line">Ø 380 mm · H 140 mm · wall 19 mm · approx. 10 kg · drain Ø 45 mm</div>
+            <div class="sku">HX-MW · HX-RG · HX-BP</div>
+          </article>
+        </div>
+        <div class="product-showcase">
+          <div class="showcase-title">Soft Bowl · Mineral White · MW</div>
+          <div class="showcase-layout">
+            <figure class="showcase-main"><img src="sb-mw-three-quarter.jpg" alt="VELITH Soft Bowl in Mineral White"></figure>
+            <div class="showcase-side">
+              <figure class="showcase-small sb-top"><img src="sb-mw-top.jpg" alt="VELITH Soft Bowl Mineral White top view"></figure>
+              <figure class="showcase-small sb-detail"><img src="sb-mw-detail.jpg" alt="VELITH Soft Bowl Mineral White close three-quarter view showing thin rim and matte mineral surface"></figure>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-showcase">
+          <div class="showcase-title">Broad Helix · Mineral White · MW</div>
+          <div class="showcase-layout">
+            <figure class="showcase-main"><img src="bh-mw-three-quarter.jpg" alt="VELITH Broad Helix in Mineral White"></figure>
+            <div class="showcase-side">
+              <figure class="showcase-small"><img src="bh-mw-top.jpg" alt="VELITH Broad Helix Mineral White top view"></figure>
+              <figure class="showcase-small"><img src="bh-mw-detail.jpg" alt="VELITH Broad Helix Mineral White mineral surface and fluting detail"></figure>
+            </div>
+          </div>
+          <div class="bh-pink-accent">
+            <figure class="bh-pink-detail"><img src="bh-bp-detail.jpg" alt="VELITH Broad Helix Blush Pink mineral surface and fluting detail"></figure>
+            <div class="bh-colour-label">Broad Helix · Blush Pink · BP</div>
+          </div>
+        </div>
+        <div style="margin-top:54px">
+          <div class="label">Mineral Colours</div>
+          <h2>Quiet tones for contemporary interiors.</h2>
+          <div class="palette">
+            <div class="colour-card"><div class="swatch mw"></div><h3>Mineral White</h3><p>MW</p><p>Clean, soft mineral white.</p></div>
+            <div class="colour-card"><div class="swatch rg"></div><h3>Rikyu Grey</h3><p>RG</p><p>A pale, muted warm grey with understated mineral character.</p></div>
+            <div class="colour-card"><div class="swatch bp"></div><h3>Blush Pink</h3><p>BP</p><p>A soft, muted mineral pink with a calm matte expression.</p></div>
+          </div>
+          <p class="muted" style="margin-top:24px;font-size:14px">Colours shown on screen are indicative only. Physical approved samples should be used as the final colour reference.</p>
         </div>
       </div>
     </section>
@@ -139,60 +221,79 @@
 
     <section class="light" id="technology">
       <div class="container">
-        <div class="label">Technology Snapshot</div>
-        <h2>White BCSA + RUFA + Hybrid Fiber</h2>
-        <p class="muted">VELITH is built on a technical foundation developed for mineral casting performance, surface quality, and design flexibility.</p>
+        <div class="label">Material Technology</div>
+        <h2>Three elements behind the VELITH mineral platform.</h2>
+        <p class="muted">A focused mineral casting system developed to support refined surfaces, controlled production, and thin-wall architectural forms.</p>
         <div class="grid3">
-          <article class="card"><h3>White BCSA Binder</h3><p>Provides a clean white mineral base, rapid early strength development, and a low-shrinkage cementitious foundation for architectural casting.</p></article>
-          <article class="card"><h3>RUFA Technology</h3><p>Enhances the mineral matrix, supports packing density, contributes to surface refinement, and helps create a dense architectural mineral structure.</p></article>
-          <article class="card"><h3>Hybrid Fiber</h3><p>Supports thin-wall casting, handling strength, crack mitigation, and dimensional stability.</p></article>
-          <article class="card"><h3>Vacuum De-Airing</h3><p>Helps remove entrapped air, reducing visible pinholes and supporting a smoother surface finish.</p></article>
-          <article class="card"><h3>Surface Protection</h3><p>Designed to work with silicate-based densifiers and penetrating stain-resistant architectural sealer systems.</p></article>
-          <article class="card"><h3>Air Curing</h3><p>Designed for air curing under intended production conditions, without steam curing or autoclave curing.</p></article>
+          <article class="card"><h3>White BCSA Mineral Matrix</h3><p>A white BCSA-based mineral casting matrix formulated without polymer or resin, providing the mineral base for VELITH’s matte architectural character.</p></article>
+          <article class="card"><h3>RUFA Technology</h3><p>Reactive ultra-fine mineral technology engineered to support flow, particle packing, matrix density, and controlled casting performance.</p></article>
+          <article class="card"><h3>Hybrid Fiber Reinforcement</h3><p>Macro- and micro-fiber reinforcement developed to support thin-wall forms, handling strength, crack control, and dimensional stability.</p></article>
         </div>
+        <div class="note"><strong>Production approach:</strong> VELITH uses vacuum de-airing and air curing under intended production conditions. Surface protection is applied as a separate finishing system for stain resistance and service performance.</div>
       </div>
     </section>
 
     <section id="evaluation">
       <div class="container">
-        <div class="label">Internal Evaluation Highlights</div>
-        <h2>Developed through internal screening and prototype evaluation.</h2>
-        <p class="muted">VELITH prototypes and surface-treated samples have been evaluated through Triaxis internal screening methods for material development, product refinement, and partner discussion.</p>
-        <div class="note">These internal observations are not presented as third-party certification. Project-specific testing is recommended before commercial application.</div>
+        <div class="label">Development Evaluation</div>
+        <h2>Prototype screening before project-specific testing.</h2>
         <div class="grid3">
-          <div class="mini"><strong>98°C Hot-Water Exposure</strong><br>No visible cracking observed in the evaluated prototype under internal hot-water exposure conditions.</div>
-          <div class="mini"><strong>Water & Edible Oil Repellency</strong><br>Visible beading / repellency behavior with no immediate visible penetration under internal screening.</div>
-          <div class="mini"><strong>Outdoor Exposure</strong><br>No visible yellowing or cracking observed in surface-treated samples under internal outdoor observation conditions.</div>
+          <div class="mini"><strong>Hot-Water Exposure</strong><br>98°C internal screening with no visible cracking in the evaluated prototype.</div>
+          <div class="mini"><strong>Surface Repellency</strong><br>Water and edible oil beading observed on protected samples during internal screening.</div>
+          <div class="mini"><strong>Outdoor Observation</strong><br>No visible yellowing or cracking observed in the surface-treated samples evaluated.</div>
         </div>
+        <div class="note"><strong>Internal development data.</strong> These observations are not third-party certification. Project-specific testing can be arranged where required.</div>
       </div>
     </section>
 
     <section class="light" id="resources">
       <div class="container">
-        <div class="label">Resources</div>
-        <h2>Technical documents & product information.</h2>
-        <p class="muted">Download or request VELITH documents for product evaluation, technical review, and partnership discussion. Some technical documents may be provided after initial contact to ensure correct application and professional use.</p>
+        <div class="label">Technical Resources</div>
+        <h2>Documents for evaluation and collaboration.</h2>
+        <p class="muted">Supporting documents for product evaluation, specification, installation, care, and partnership discussion.</p>
         <div class="cards">
-          <article class="card"><h3>VELITH Washbasin Brochure</h3><p>For designers, showrooms, distributors, and project clients interested in finished architectural mineral washbasins.</p><a class="btn primary" href="#contact">Request Brochure</a></article>
-          <article class="card"><h3>VELITH Casting System TDS</h3><p>For basin studios, OEM / ODM partners, and selected technical partners evaluating the White BCSA mineral casting system.</p><a class="btn primary" href="#contact">Request TDS</a></article>
+          <article class="card">
+            <h3>Product &amp; Technical</h3>
+            <ul>
+              <li>Technical Data Sheet</li>
+              <li>Installation Manual</li>
+              <li>Care &amp; Maintenance</li>
+              <li>FAQ</li>
+            </ul>
+            <div class="btns"><a class="btn primary" href="mailto:jsyang@triaxis.com.tw?subject=VELITH%20Technical%20Documents%20Request">Request Documents</a></div>
+          </article>
+          <article class="card">
+            <h3>Commercial &amp; Support</h3>
+            <ul>
+              <li>Product Brochure</li>
+              <li>Warranty</li>
+              <li>VELITH vs. Ceramic Comparison</li>
+            </ul>
+            <div class="btns"><a class="btn primary" href="mailto:jsyang@triaxis.com.tw?subject=VELITH%20Commercial%20Documents%20Request">Request Documents</a></div>
+          </article>
         </div>
       </div>
     </section>
 
     <section id="contact">
       <div class="container contact">
-        <div class="label">Contact</div>
-        <h2>Explore VELITH with Triaxis.</h2>
-        <p class="lead">We welcome discussions with selected international partners interested in finished architectural mineral washbasins, casting system evaluation, OEM / ODM development, showroom programs, and regional partnership opportunities.</p>
-        <p><strong>Email:</strong> <a href="mailto:contact@triaxis.com.tw">contact@triaxis.com.tw</a><br><strong>Website:</strong> <a href="https://www.triaxis.com.tw">www.triaxis.com.tw</a><br><strong>Location:</strong> Taiwan</p>
-        <div class="btns"><a class="btn primary" href="mailto:contact@triaxis.com.tw?subject=VELITH%20Inquiry">Send Inquiry</a></div>
+        <div class="label">Partnership</div>
+        <h2>Direct collaboration. Open technical dialogue. New possibilities through partnership.</h2>
+        <p class="lead">VELITH welcomes direct collaboration with bathroom brands, distributors, vanity manufacturers, architectural-material partners and project suppliers.</p>
+        <div class="cards">
+          <article class="card">
+            <h3>Finished Washbasins</h3>
+            <p>VELITH collections for distribution, specification and project supply.</p>
+          </article>
+          <article class="card">
+            <h3>OEM · Private Label · Casting System</h3>
+            <p>Product development and manufacturing cooperation for selected partners.</p>
+          </article>
+        </div>
+        <div class="btns"><a class="btn primary" href="mailto:jsyang@triaxis.com.tw?subject=VELITH%20Partnership%20Inquiry">Discuss a Partnership</a></div>
+        <p style="margin-top:24px"><strong>Triaxis Co., Ltd.</strong><br><a href="mailto:jsyang@triaxis.com.tw">jsyang@triaxis.com.tw</a></p>
       </div>
     </section>
-    <div style="text-align:center; margin:40px 0;">
-  <a href="https://www.linkedin.com/in/jiann-shi-yang-214a94410/" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="38">
-  </a>
-</div>
   </main>
 
   <footer><div class="container">VELITH™ · Developed by Triaxis · Engineered in Taiwan</div></footer>
